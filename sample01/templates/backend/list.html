@@ -1,0 +1,35 @@
+{% extends 'layouts/backend-default.html' %}
+
+{% block content %}
+	<section>
+		<table class="table is-bordered">
+  			<thead>
+  				<tr>
+  					<th>County</th>
+  					<th>Amount Allocated</th>
+  					<th>Action</th>
+  				</tr>
+  			</thead>
+  			<tbody>
+  				{% for record in records %}
+  				<tr>
+  					<td>{{ record.name }}</td>
+  					<td>{{ record.amount }}</td>
+  					<td>
+  						<a href="{{ url_for('backend.update', record_id=record.id) }}">
+  							<span class="icon has-text-info">
+							  <i class="icon-edit" title="Edit"></i>
+							</span>
+  						</a>
+  						<a href="{{ url_for('backend.delete', record_id=record.id) }}">
+  							<span class="icon has-text-success">
+						  <i class="icon-remove" title="Delete"></i>
+						</span>
+  						</a>
+  					</td>
+  				</tr>
+  				{% endfor %}
+  			</tbody>
+  		</table>
+	</section>
+{% endblock %}

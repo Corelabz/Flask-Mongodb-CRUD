@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{{ title }}</title>
+	<meta charset="utf-8">
+	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bulma/css/bulma.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+
+	{% include 'includes/default-nav.html' %}
+
+	<div class="container">
+		<div class="columns">
+			<div class="column is-12">
+				{% block content %}
+				{% endblock %}
+			</div>
+		</div>
+	</div>
+</body>
+</html>

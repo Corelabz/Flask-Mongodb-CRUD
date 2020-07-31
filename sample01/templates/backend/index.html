@@ -1,0 +1,27 @@
+{% extends 'layouts/backend-default.html' %}
+
+{% block content %}
+
+	<section class="info-tiles">
+        <div class="tile is-ancestor has-text-centered">
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <p class="title">{{ count }}</p>
+                    <p class="subtitle">Counties</p>
+                </article>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <p class="title">{{ budget }}</p>
+                    <p class="subtitle">Total Budget</p>
+                </article>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    
+                </article>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

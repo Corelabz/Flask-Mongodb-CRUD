@@ -1,0 +1,23 @@
+{% extends 'layouts/default.html' %}
+
+{% block content %}
+	<section>
+		<table class="table is-bordered">
+  			<thead>
+  				<tr col-span="2"></tr>
+  				<tr>
+  					<th>County</th>
+  					<th>Amount Allocated</th>
+  				</tr>
+  			</thead>
+  			<tbody>
+  				{% for record in records %}
+  				<tr>
+  					<td>{{ record.name }}</td>
+  					<td>{{ record.amount }}</td>
+  				</tr>
+  				{% endfor %}
+  			</tbody>
+  		</table>
+	</section>
+{% endblock %}
